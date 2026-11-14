@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1.1 Research in tech — Lesson</title>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--coral:#2f9a74;--mag:#c4127a;--pur:#6b2a8c;--grey:#77787b;--lg:#eeeff0;--ink:#231f20;--green:#5c9e2f;--gbg:#eef6d3;--rbg:#fbe0db}
+*{box-sizing:border-box}body{margin:0;font-family:"Fira Sans",system-ui,sans-serif;color:var(--ink);background:#fff;font-weight:300}
+header{display:flex;align-items:stretch;border-bottom:3px solid var(--coral)}
+header .n{background:linear-gradient(120deg,#1f7d5c,#4fb58c);color:#fff;font-weight:500;font-size:34px;padding:14px 22px}
+header h1{margin:0;align-self:center;padding-left:18px;font-weight:500;font-size:28px;color:#4d4d4f}
+header .t{margin-left:auto;align-self:center;margin-right:18px;background:var(--coral);color:#fff;font-weight:600;font-size:13px;padding:6px 12px;border-radius:4px}
+nav{display:flex;gap:6px;padding:14px 22px 0;flex-wrap:wrap}
+nav button{font:inherit;font-weight:500;border:1.5px solid var(--coral);background:#fff;color:var(--coral);padding:7px 14px;border-radius:20px;cursor:pointer}
+nav button.on{background:var(--coral);color:#fff}
+main{max-width:980px;margin:0 auto;padding:18px 22px 40px}
+.sec{display:none}.sec.on{display:block}
+h2{font-weight:500;color:var(--grey);font-size:22px;margin:6px 0 4px}
+.ins{font-weight:500;margin:0 0 14px}.ins b{color:var(--coral);font-size:20px;margin-right:6px}
+.vocab{display:flex;flex-wrap:wrap;gap:6px;border:1px solid #a7a9ac;padding:8px 10px;margin-bottom:16px;font-size:14px}
+.vocab span{background:var(--lg);padding:3px 8px;border-radius:3px}
+.card{background:var(--lg);border-left:5px solid var(--coral);padding:22px 24px;min-height:150px;position:relative}
+.card .cnt{position:absolute;top:10px;right:14px;color:var(--grey);font-size:13px}
+.big{font-size:30px;font-weight:500;margin:4px 0 10px}
+.hint{color:var(--grey);font-size:15px}
+.ans{display:none;margin-top:14px;padding:10px 14px;background:#fff;border:1px dashed var(--coral);color:#1f6f8b;font-style:italic;font-weight:400}
+.ans.show{display:block}
+.ctrl{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.ctrl button{font:inherit;font-weight:500;border:0;padding:9px 16px;border-radius:4px;cursor:pointer;background:#4d4d4f;color:#fff}
+.ctrl button.c{background:var(--coral)}.ctrl button.l{background:#fff;color:#4d4d4f;border:1px solid #a7a9ac}
+table.sp{border-collapse:collapse;width:100%;font-size:16px;margin:6px 0 4px;background:#fff}
+table.sp th,table.sp td{border:1px solid #c9cacc;padding:7px 10px;text-align:left}
+table.sp th{background:#e3e4e5;font-weight:600}
+table.sp td:first-child{font-weight:500;width:30%}
+.frames{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 16px}
+.frames div{padding:9px 11px;font-size:14px;border-radius:4px;line-height:1.35}
+.frames b{display:block;font-weight:600;margin-bottom:2px}
+.f1{background:var(--gbg)}.f2{background:var(--rbg)}.f3{background:#fdf0d5}.f4{background:#e3eef8}
+.stmt{font-size:30px;font-weight:500;line-height:1.25;margin:6px 0 10px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 9px;border-radius:12px;color:#fff;margin-bottom:6px}
+.tt{background:var(--green)}.tf{background:#d6322f}.tp{background:#d99a1c}.to{background:var(--mag)}
+.note{font-size:14px;color:#4d4d4f;margin-top:8px}
+.key{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;font-size:15px}
+.key div{border-bottom:1px solid #e3e4e5;padding:4px 0}
+.key b{font-weight:600}
+.use{background:#f6f5f1;border:1px solid #e3e1da;border-radius:4px;padding:10px 14px;margin-top:12px}
+.use .uh{font-weight:600;margin-bottom:6px;color:#4d4d4f}
+.use ul{margin:0;padding-left:18px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px 18px;font-size:15px}
+.use li{font-weight:400}
+@media(max-width:700px){.use ul{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.frames{grid-template-columns:1fr 1fr}.big,.stmt{font-size:23px}}
+
+:root{--gold:#f2b631}
+header .n{background:linear-gradient(120deg,#1f7d5c,#4fb58c)}
+.lvl{display:inline-flex;border:1.5px solid var(--coral);border-radius:20px;overflow:hidden;margin:0 0 14px}
+.lvl button{font:inherit;font-weight:500;border:0;background:#fff;color:var(--coral);padding:6px 16px;cursor:pointer}
+.lvl button.on{background:var(--coral);color:#fff}
+.lvl button.p.on{background:var(--gold);color:#3b2c00}
+.lvl button.p{color:#b07d00}
+.plus{display:none}.sec.up .plus{display:block}.sec.up .base{display:none}
+.pluscard{border-left-color:var(--gold)!important;background:#fdf7e6!important}
+.star{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--gold);color:#fff;font-size:13px;margin-right:6px;vertical-align:2px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.chips span,.chips button{font:inherit;background:#fff;border:1.5px solid var(--coral);color:var(--ink);padding:7px 12px;border-radius:18px;font-size:15px;font-weight:400}
+.chips button{cursor:pointer}
+.chips button i{font-style:normal;font-weight:600;color:#fff;background:var(--coral);border-radius:50%;display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;margin-right:6px;font-size:12px}
+.chips.gold span{border-color:var(--gold)}
+.frame{background:#dcf0e6;border-radius:4px;padding:10px 14px;margin:8px 0 14px;font-size:16px}
+.frame b{font-weight:600}
+.frame.g{background:#fdf0d5}
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 14px}
+.cats div{background:var(--lg);border-top:4px solid var(--coral);padding:10px 12px;font-size:14.5px;line-height:1.4}
+.cats b{display:block;font-weight:600;margin-bottom:4px;font-size:15.5px}
+.cats.g div{border-top-color:var(--gold);background:#fdf7e6}
+.phr{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 14px}
+.phr span{background:#fff;border:1px solid var(--coral);color:#4d4d4f;padding:4px 10px;border-radius:14px;font-size:14px}
+.phr.g span{border-color:var(--gold)}
+.mine{display:grid;gap:6px;max-width:640px}
+.mine input{font:inherit;font-size:16px;padding:8px 10px;border:1px solid #c9cacc;border-radius:4px}
+.score{display:flex;gap:6px;margin:8px 0}
+.score button{font:inherit;width:40px;height:40px;border-radius:50%;border:1.5px solid var(--coral);background:#fff;color:var(--coral);font-weight:600;cursor:pointer}
+.score button.on{background:var(--coral);color:#fff}
+.msg{color:var(--grey);font-size:14px;margin-left:8px}
+@media(max-width:800px){.cats{grid-template-columns:1fr 1fr}}
+.outc{display:flex;align-items:center;gap:14px;background:#dcf0e6;margin:0;padding:10px 22px;font-size:15px}.outc b{background:#2f9a74;color:#fff;padding:4px 10px;border-radius:4px;font-weight:600;font-size:13px}.mine.q input{max-width:none}.tip{font-size:14px;color:#4d4d4f;background:#f6f5f1;border:1px solid #e3e1da;border-radius:4px;padding:8px 12px;margin:6px 0 14px}</style></head><body>
+<header><div class="n">1.1</div><h1>Research in tech</h1><div class="t">LESSON</div></header>
+<div class="outc"><b>Lesson outcome</b>You can use a range of vocabulary related to market and user research.</div>
+<a href="../../../index.html" style="display:inline-block;margin:12px 22px 0;color:var(--coral);font-weight:500;text-decoration:none;font-size:15px">← Contents</a>
+<nav>
+ <button data-s="s1" class="on">1 · Warm-up</button>
+ <button data-s="s2">2 · Homework check</button>
+ <button data-s="s3">3 · Which method?</button>
+ <button data-s="s4">4 · Project: two apps</button>
+ <button data-s="s5">5 · My phrases</button>
+</nav>
+<main>
+
+<section id="s1" class="sec">
+ <h2>Warm-up</h2>
+ <p class="ins"><b>1</b>Answer the question. Speak for about one minute.</p>
+ <div class="lvl"><button class="on" onclick="lv('s1',0,this)">Base</button><button class="p" onclick="lv('s1',1,this)">★ Level up</button></div>
+ <div class="base"><div class="card"><span class="cnt" id="wn"></span><div class="big" id="ww" style="font-size:24px"></div><div class="hint" id="wh"></div><div class="ans" id="wa"></div></div><div class="ctrl"><button class="l" onclick="step('w',-1)">← Back</button><button onclick="step('w',1)">Next →</button><button class="l" onclick="shuf('w')">Shuffle</button></div></div>
+ <div class="plus"><div class="card pluscard"><span class="cnt" id="wpn"></span><div class="big" id="wpw" style="font-size:24px"></div><div class="hint" id="wph"></div><div class="ans" id="wpa"></div></div><div class="ctrl"><button class="l" onclick="step('wp',-1)">← Back</button><button onclick="step('wp',1)">Next →</button><button class="l" onclick="shuf('wp')">Shuffle</button></div></div>
+</section>
+
+<section id="s2" class="sec">
+ <h2>Homework check</h2>
+ <div class="lvl"><button class="on" onclick="lv('s2',0,this)">Base</button><button class="p" onclick="lv('s2',1,this)">★ Level up</button></div>
+ <div class="base">
+  <p class="ins"><b>2A</b>The video. Answer in your own words.</p>
+  <div class="card"><span class="cnt" id="vn"></span><div class="big" id="vw" style="font-size:24px"></div><div class="hint" id="vh"></div><div class="ans" id="va"></div></div><div class="ctrl"><button class="l" onclick="step('v',-1)">← Back</button><button onclick="step('v',1)">Next →</button><button class="l" onclick="shuf('v')">Shuffle</button></div>
+  <p class="ins" style="margin-top:26px"><b>B</b>Vocabulary blitz. Read the explanation and say the word. Then use it in a sentence about your work.</p>
+  <div class="card"><span class="cnt" id="bn"></span><div class="big" id="bw" style="font-size:24px"></div><div class="hint" id="bh"></div><div class="ans" id="ba"></div></div><div class="ctrl"><button class="l" onclick="step('b',-1)">← Back</button><button class="c" onclick="rev('b')">Show answer</button><button onclick="step('b',1)">Next →</button><button class="l" onclick="shuf('b')">Shuffle</button></div>
+  <p class="ins" style="margin-top:26px"><b>C</b>Complete the collocation.</p>
+  <div class="card"><span class="cnt" id="on"></span><div class="big" id="ow" style="font-size:24px"></div><div class="hint" id="oh"></div><div class="ans" id="oa"></div></div><div class="ctrl"><button class="l" onclick="step('o',-1)">← Back</button><button class="c" onclick="rev('o')">Show answer</button><button onclick="step('o',1)">Next →</button><button class="l" onclick="shuf('o')">Shuffle</button></div>
+ </div>
+ <div class="plus">
+  <p class="ins"><span class="star">★</span>The video: go further.</p>
+  <div class="card pluscard"><span class="cnt" id="vpn"></span><div class="big" id="vpw" style="font-size:24px"></div><div class="hint" id="vph"></div><div class="ans" id="vpa"></div></div><div class="ctrl"><button class="l" onclick="step('vp',-1)">← Back</button><button onclick="step('vp',1)">Next →</button><button class="l" onclick="shuf('vp')">Shuffle</button></div>
+  <p class="ins" style="margin-top:26px"><span class="star">★</span>Research words people use in tech. Say the word, then tell a short story from your work where you use it.</p>
+  <div class="card pluscard"><span class="cnt" id="bpn"></span><div class="big" id="bpw" style="font-size:24px"></div><div class="hint" id="bph"></div><div class="ans" id="bpa"></div></div><div class="ctrl"><button class="l" onclick="step('bp',-1)">← Back</button><button class="c" onclick="rev('bp')">Show answer</button><button onclick="step('bp',1)">Next →</button><button class="l" onclick="shuf('bp')">Shuffle</button></div>
+  <p class="ins" style="margin-top:26px"><span class="star">★</span>Which verbs go with it? Say as many as you can, then make a sentence.</p>
+  <div class="card pluscard"><span class="cnt" id="opn"></span><div class="big" id="opw" style="font-size:24px"></div><div class="hint" id="oph"></div><div class="ans" id="opa"></div></div><div class="ctrl"><button class="l" onclick="step('op',-1)">← Back</button><button class="c" onclick="rev('op')">Show verbs</button><button onclick="step('op',1)">Next →</button><button class="l" onclick="shuf('op')">Shuffle</button></div>
+ </div>
+</section>
+
+<section id="s3" class="sec">
+ <h2>Which method?</h2>
+ <div class="lvl"><button class="on" onclick="lv('s3',0,this)">Base</button><button class="p" onclick="lv('s3',1,this)">★ Level up</button></div>
+ <div class="base">
+  <p class="ins"><b>3</b>Read the research question. Which method would you choose? Is it qualitative or quantitative, primary or secondary? Explain, then check.</p>
+  <div class="card"><span class="cnt" id="pn"></span><div class="big" id="pw" style="font-size:24px"></div><div class="hint" id="ph"></div><div class="ans" id="pa"></div></div><div class="ctrl"><button class="l" onclick="step('p',-1)">← Back</button><button class="c" onclick="rev('p')">Show a suggestion</button><button onclick="step('p',1)">Next →</button><button class="l" onclick="shuf('p')">Shuffle</button></div>
+  <div class="phr" style="margin-top:12px"><span>I’d go for … because …</span><span>This is a qualitative / quantitative question.</span><span>We could carry out … with a sample of …</span><span>Desk research would be cheaper, but …</span><span>It would help us gauge …</span></div>
+ </div>
+ <div class="plus">
+  <p class="ins"><span class="star">★</span>A real-life problem. Make a research plan in two minutes, then defend it. Your teacher plays a sceptical stakeholder.</p>
+  <div class="card pluscard"><span class="cnt" id="ppn"></span><div class="big" id="ppw" style="font-size:24px"></div><div class="hint" id="pph"></div><div class="ans" id="ppa"></div></div><div class="ctrl"><button class="l" onclick="step('pp',-1)">← Back</button><button onclick="step('pp',1)">Next →</button><button class="l" onclick="shuf('pp')">Shuffle</button></div>
+  <div class="phr g" style="margin-top:12px"><span>Given the budget, I’d …</span><span>The risk is that …</span><span>That would give us a rough idea, but …</span><span>To be on the safe side, we could …</span><span>The sample is too small to …</span><span>I’d double-check …</span></div>
+ </div>
+</section>
+
+<section id="s4" class="sec">
+ <h2>PROJECT: How research affects a product</h2>
+ <div class="lvl"><button class="on" onclick="lv('s4',0,this)">Base</button><button class="p" onclick="lv('s4',1,this)">★ Level up</button></div>
+ <div class="base">
+  <p class="ins"><b>4A</b>Choose an app category and two well-known apps. Describe each one.</p>
+  <div class="chips"><span>Notion vs Obsidian</span><span>Duolingo vs Babbel</span><span>Spotify vs Apple Music</span><span>Revolut vs Monobank</span><span>Slack vs Microsoft Teams</span><span>Figma vs Canva</span></div>
+  <div class="cats">
+   <div><b>Attract</b>How does the app attract users? What does it offer them?</div>
+   <div><b>Promise</b>What does the brand promise to do?</div>
+   <div><b>Visibility</b>What makes it visible or memorable?</div>
+   <div><b>Ideal user</b>Who is the ideal user for the app?</div>
+  </div>
+  <div class="phr"><span>It attracts users with …</span><span>Its promise is …</span><span>It’s memorable because of …</span><span>The ideal user is someone who …</span><span>Unlike …, it …</span></div>
+  <p class="ins"><b>B</b>Invent a new feature for one of the apps. Write 5–7 survey questions to find out what users feel and what they’d like.</p>
+  <div class="tip">Mix question types: at least one <b>open</b>, one <b>closed</b> (yes/no), one <b>rating</b> (1–10) and one <b>multiple-choice</b> question. Start general, then get more specific.</div>
+  <div class="mine q"><input placeholder="1. …"><input placeholder="2. …"><input placeholder="3. …"><input placeholder="4. …"><input placeholder="5. …"><input placeholder="6. …"><input placeholder="7. …"></div>
+  <p class="ins" style="margin-top:18px"><b>C</b>Your teacher is the respondent. Ask your questions and take notes.</p>
+  <p class="ins"><b>D</b>Present your feature in two minutes: what you learnt from the answers and what you’ll change. Your teacher says if their needs were taken into account.</p>
+  <div class="phr"><span>According to the survey, …</span><span>The respondent said / suggested that …</span><span>Based on the answers, we’ll …</span><span>We decided not to … because …</span></div>
+ </div>
+ <div class="plus">
+  <p class="ins"><span class="star">★</span>Instead of a survey, run a five-minute user interview with your teacher. Follow three rules.</p>
+  <div class="cats g">
+   <div><b>Their life, not your idea</b>Don’t pitch the feature. Ask how they do things now.</div>
+   <div><b>The past, not the future</b>“Tell me about the last time you …” — not “Would you use …?”</div>
+   <div><b>Listen more</b>Talk 20%, listen 80%. Ask “Why?” and “What happened next?”</div>
+   <div><b>Compliments are not data</b>“Great idea!” tells you nothing. Ask what they actually did.</div>
+  </div>
+  <div class="phr g"><span>✗ Would you use an app that …?</span><span>✓ How do you … at the moment?</span><span>✗ Do you like our idea?</span><span>✓ What’s the hardest part about …?</span><span>✓ What have you tried so far?</span><span>✓ Is there anything else I should have asked?</span></div>
+  <p class="ins"><span class="star">★</span>Present your insights to a US stakeholder (your teacher). They will challenge you: “Five people? That’s not data.” Defend your findings.</p>
+  <div class="phr g"><span>It’s a small sample, but …</span><span>The pattern was clear: …</span><span>Three out of five users admitted that …</span><span>The next step would be to …</span></div>
+ </div>
+</section>
+
+<section id="s5" class="sec">
+ <h2>My phrases</h2>
+ <p class="ins"><b>5</b>Write 5 phrases from today you want to remember. Write the whole phrase, not one word: <i>gauge interest in a feature</i>, not <i>gauge</i>.</p>
+ <div class="mine" id="mine"><input placeholder="1. …"><input placeholder="2. …"><input placeholder="3. …"><input placeholder="4. …"><input placeholder="5. …"></div>
+ <div class="ctrl"><button class="c" onclick="copyMine()">Copy my phrases</button><span class="msg" id="cmsg"></span></div>
+ <p class="ins" style="margin-top:24px"><b>✓</b>How well can you use vocabulary related to market and user research? 0 = I need more practice, 5 = I know this well.</p>
+ <div class="score" id="score"><button onclick="sc(this)">0</button><button onclick="sc(this)">1</button><button onclick="sc(this)">2</button><button onclick="sc(this)">3</button><button onclick="sc(this)">4</button><button onclick="sc(this)">5</button></div>
+ <p class="ins" style="margin-top:20px"><span class="star">★</span>Level up: Without stopping, speak for one minute. Explain to a friend outside tech how your company finds out what users want. Use at least 6 words from today.</p>
+</section>
+</main>
+<footer style="max-width:980px;margin:0 auto;padding:0 22px 30px;font-size:12px;color:var(--grey)">Valentyna Hordiienko · Middle Learning Architect</footer>
+<script>
+const D={"w": ["Have you ever filled in a survey after a flight, a hotel stay or an app update? Did you feel anyone read your answers?", "When did an app last ask you for feedback? What did you answer — and why?", "How does your company find out what users or clients really want?", "Have you ever worked on a feature that nobody used? What happened?", "Data or gut feeling: what usually decides things in your team?"], "wp": ["“If I had asked people what they wanted, they would have said faster horses.” Is user research overrated?", "Research is expensive. Why do companies still put money into it? Would you rather design your own research or buy existing data?", "Some teams now let AI summarise hundreds of user interviews in minutes. What could go wrong?", "A survey says 80% of users ‘love’ a new feature, but almost nobody uses it. How is that possible?", "Who should talk to users in a tech company: researchers, PMs, designers or engineers? Why?"], "v": [["What is the difference between primary and secondary research?", "Give an example of each for a product you know."], ["What is the difference between qualitative and quantitative research?", "Which one answers ‘how many?’ and which one answers ‘why?’"], ["What can a company use market research for?", "Name at least three things."], ["Why are focus groups useful even though they are small?", ""], ["How can a small start-up make research cheaper?", ""], ["What is the key to useful market research?", "Use: plan carefully, keep it relevant, insights, strategy."]], "vp": [["Explain to a new junior colleague when you’d use a survey and when you’d use an in-depth interview.", ""], ["One way to save money is to reduce the sample size. What’s the risk?", ""], ["Desk research is cheap. Where would you look for data about your product’s market today?", "Think beyond government reports: reviews, Reddit, competitors’ pricing pages …"], ["Which method would you choose for your product right now — and why?", ""]], "b": [["relating to results that can be shown as numbers or percentages", "quantitative", "Analytics gives us quantitative data: clicks, sign-ups, churn."], ["relating to the quality of something rather than the quantity", "qualitative", "Interviews give us qualitative insights — the ‘why’."], ["someone who answers a set of questions in a survey", "respondent", "Over half of the respondents use the app daily."], ["someone who tries out something new to see how well it performs", "product tester", "We recruited 20 product testers for the beta."], ["to measure how people feel about something or the effect it is likely to have", "gauge", "We ran a quick poll to gauge interest in the feature."], ["the effect or influence that something has", "impact", "What was the impact of the redesign on sign-ups?"], ["to collect information over a period of time", "gather", "We gather feedback through in-app surveys."], ["realistic and likely to succeed", "viable", "Is a paid plan viable for this market?"], ["careful examination of data to understand it better", "data analysis", "The data analysis showed a drop after the update."], ["research based on data that already exists (also: desk research)", "secondary research", "Secondary research is cheaper but less specific."], ["research where you collect new data yourself", "primary research", "Interviews and surveys are primary research."], ["a small group of people who discuss a product with a moderator", "focus group", "The focus group hated the new logo."], ["the number of people you study", "sample size", "A sample size of five is too small for a survey."], ["the group of people a product is made for", "target audience", "Our target audience is freelance designers."], ["how happy customers are with a product or service", "customer satisfaction", "Customer satisfaction went up after we fixed support."], ["to put a new product on the market", "launch a product", "We’re launching the product in the US in May."]], "o": [["online ___", "surveys"], ["___ group", "focus"], ["customer ___", "satisfaction"], ["in-depth ___", "interviews"], ["___ research (= secondary research)", "desk"], ["___ a product", "launch"], ["target ___", "audience"], ["sample ___", "size"], ["carry out ___", "research"], ["___ the impact", "gauge"]], "bp": [["showing two versions of a screen to different users to see which works better", "A/B test", "We ran an A/B test on the pricing page."], ["the percentage of users who stop using a product", "churn rate", "Our churn rate doubled after the price change."], ["a one-to-one conversation to understand a user’s problems", "user interview", "I did five user interviews this week."], ["watching users try to complete tasks with your product", "usability test", "The usability test showed nobody could find ‘Export’."], ["a deep understanding of why users behave in a certain way", "insight", "The key insight: people don’t trust auto-save."], ["combining findings from many interviews into key themes", "synthesis", "AI can speed up synthesis, but check the quotes."], ["a score showing how likely users are to recommend a product", "NPS (Net Promoter Score)", "Our NPS went from 20 to 35."], ["a simple first version built to test an idea", "MVP (minimum viable product)", "We tested the idea with an MVP in two weeks."]], "op": [["___ research", "carry out / conduct / commission / outsource"], ["___ data", "gather / collect / analyse / interpret"], ["___ a survey", "design / run / send out / fill in / complete"], ["___ feedback", "get / collect / act on / ignore"], ["___ a product", "launch / test / roll out / pull"], ["___ the impact", "gauge / measure / assess"], ["___ users", "interview / recruit / survey / observe"], ["___ insights", "gain / generate / share / act on"]], "p": [["Why do users cancel their subscription after the first month?", "In-depth user interviews — qualitative, primary. You need the ‘why’."], ["Which sign-up button gets more clicks: ‘Start free’ or ‘Get started’?", "A/B test — quantitative, primary."], ["How big is the market for project-management tools in Germany?", "Desk research: industry reports, statistics — secondary, quantitative."], ["Can new users set up their first project without help?", "Usability test: watch 5 users try — qualitative."], ["How satisfied are our 20,000 customers with support?", "Online survey with rating questions / NPS — quantitative."], ["What do competitors offer in their premium plans?", "Desk research: competitors’ websites, reviews — secondary."], ["Users leave 1-star reviews after the update. What exactly annoys them?", "Analyse the reviews (AI can group them by theme), then a few follow-up interviews."], ["Is there demand for a new AI feature before we build it?", "Interviews about past behaviour + a simple landing page to gauge interest."]], "pp": [["You have one week and no budget. Find out why trial users don’t upgrade.", "Make a plan: method, sample, what you’ll ask, how you’ll report it."], ["Your CEO wants to launch in the US next quarter. What do you research first — and how?", ""], ["Analytics says users love feature X, but the sales team says clients hate it. How do you find out the truth?", ""], ["Your manager says: “Just ask ChatGPT what our users want.” Respond.", "Agree with part of it, then explain the limits."], ["You have 300 open-ended survey answers and two days. How do you analyse them? What would you double-check if AI helps?", ""], ["A focus group of 8 people hated the new design. Should you cancel the launch?", "Think about sample size and who was in the group."]]};
+const st={},ord={};for(const k in D){st[k]=0;ord[k]=D[k].map((_,i)=>i)}
+const $=id=>document.getElementById(id);
+const big=t=>'<span style="color:var(--ink);font-size:18px;font-weight:400">'+t+'</span>';
+function render(k){const d=D[k][ord[k][st[k]]];$(k+"n").textContent=(st[k]+1)+" / "+D[k].length;const a=$(k+"a");a.classList.remove("show");const w=$(k+"w"),h=$(k+"h");
+ if(k=="w"||k=="wp"){w.textContent=d;h.textContent=""}
+ else if(k=="v"||k=="vp"){w.textContent=d[0];h.innerHTML=d[1]?big(d[1]):""}
+ else if(k=="b"||k=="bp"){w.textContent=d[0];h.textContent="What’s the word?";a.innerHTML="<b>"+d[1]+"</b> — "+d[2]}
+ else if(k=="o"){w.textContent=d[0];h.textContent="Which word completes it?";a.textContent=d[1]}
+ else if(k=="op"){w.textContent=d[0];h.textContent="Which verbs can you use?";a.textContent=d[1]}
+ else if(k=="p"){w.textContent=d[0];h.textContent="Which method would you choose?";a.textContent=d[1]}
+ else if(k=="pp"){w.textContent=d[0];h.innerHTML=d[1]?big(d[1]):""}
+}
+function step(k,n){const L=D[k].length;st[k]=(st[k]+n+L)%L;render(k)}
+function rev(k){$(k+"a").classList.toggle("show")}
+function shuf(k){const a=ord[k];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}st[k]=0;render(k)}
+function lv(s,u,b){$(s).classList.toggle("up",!!u);b.parentNode.querySelectorAll("button").forEach(x=>x.classList.remove("on"));b.classList.add("on")}
+function copyMine(){const t=[...document.querySelectorAll("#mine input")].map(x=>x.value.trim()).filter(Boolean).join("\n");if(!t){cmsg.textContent="Write your phrases first.";return}
+ try{navigator.clipboard.writeText(t).then(()=>cmsg.textContent="Copied!",()=>cmsg.textContent="Select the text and copy it manually.")}catch(e){cmsg.textContent="Select the text and copy it manually."}}
+function sc(b){document.querySelectorAll("#score button").forEach(x=>x.classList.remove("on"));b.classList.add("on")}
+document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("nav button,.sec").forEach(x=>x.classList.remove("on"));b.classList.add("on");$(b.dataset.s).classList.add("on")});
+$("s1").classList.add("on");for(const k in D)render(k);
+</script></body></html>

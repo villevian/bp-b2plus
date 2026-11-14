@@ -109,6 +109,7 @@ ol.ex li{padding-left:4px}
 textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110px;padding:8px 10px;border:1px solid #c9cacc;border-radius:4px}
 .sa{background:var(--lg);padding:12px 16px;border-left:5px solid var(--coral);font-size:15.5px;line-height:1.5;display:none;margin-top:10px}
 .sa.show{display:block}
+.bsec{font-weight:600;font-size:20px;color:#77787b;margin:4px 0 12px}.bsec.v{color:var(--mag)}.bsec .sub{color:var(--ink);font-weight:500;font-size:18px;margin-left:8px}
 @media(max-width:700px){.match,.cls{grid-template-columns:1fr}.defs{columns:1}}
 </style></head><body>
 <header><div class="n">1.1</div><h1>Research in tech</h1><div class="t">LESSON</div></header>
@@ -123,12 +124,14 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 <main>
 
 <section id="s1" class="sec">
+ <div class="bsec">Lead-in</div>
  <div class="lvl"><button class="on" onclick="lv('s1',0,this)">Base</button><button class="p" onclick="lv('s1',1,this)">★ Level up</button></div>
  <div class="base"><p class="ins"><b>1</b>Discuss these questions.</p><div class="card"><span class="cnt" id="wn"></span><div class="big" id="ww" style="font-size:24px"></div><div class="hint" id="wh"></div><div class="ans" id="wa"></div></div><div class="ctrl"><button class="l" onclick="step('w',-1)">← Back</button><button onclick="step('w',1)">Next →</button><button class="l" onclick="shuf('w')">Shuffle</button></div></div>
  <div class="plus"><p class="ins"><b>1</b><span class="star">★</span>Discuss. Give reasons and examples from your work.</p><div class="card pluscard"><span class="cnt" id="wpn"></span><div class="big" id="wpw" style="font-size:24px"></div><div class="hint" id="wph"></div><div class="ans" id="wpa"></div></div><div class="ctrl"><button class="l" onclick="step('wp',-1)">← Back</button><button onclick="step('wp',1)">Next →</button><button class="l" onclick="shuf('wp')">Shuffle</button></div></div>
 </section>
 
 <section id="s2" class="sec">
+ <div class="bsec v">VIDEO</div>
  <p class="ins"><b>2</b>You are going to watch a video about market research. How many ways can you think of for a company to collect information before it launches a new product? Make a list.</p>
  <textarea class="list" placeholder="online surveys&#10;…"></textarea>
  <div class="ctrl"><button class="c" onclick="sa('a2')">Show possible answers</button></div>
@@ -136,17 +139,20 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s3" class="sec">
+ <div class="bsec v">VIDEO</div>
  <p class="ins"><b>3</b>Watch the video 1.1.1. Were any of your ideas from Exercise 2 mentioned? Did you hear about any other ways for companies to collect information?</p>
  <div class="ctrl"><button class="c" onclick="sa('a3')">Show the main points</button></div>
  <div class="sa" id="a3"><b>Primary research</b> — gathering new data from customers: (online) surveys, focus groups, in-depth interviews.<br><b>Secondary research</b> (desk research) — data that already exists and is publicly available: government reports, company websites, academic publications.<br>Small businesses can save money with online surveys and a smaller sample size.</div>
 </section>
 
 <section id="s4" class="sec">
+ <div class="bsec v">VIDEO</div>
  <p class="ins"><b>4</b>Watch the video again and decide if these sentences are true (T) or false (F). Correct the false sentences.</p>
  <ol class="ex"><li>Companies use market research for new products and services, and for existing ones too. <span class="tfx" data-a="1"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li><li>The company that needs the research usually does it itself. <span class="tfx" data-a="0"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li><li>Surveys, focus groups and in-depth interviews are ways of collecting new data from people. <span class="tfx" data-a="1"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li><li>Companies use focus groups when they want information from a large number of people. <span class="tfx" data-a="0"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li><li>Some small businesses make their sample size bigger to make research cheaper. <span class="tfx" data-a="0"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li><li>Both primary and secondary research help companies plan and build future strategy. <span class="tfx" data-a="1"><button onclick="tf(this,1)">T</button><button onclick="tf(this,0)">F</button></span><span class="fb"></span></li></ol>
 </section>
 
 <section id="s5" class="sec">
+ <div class="bsec v">VIDEO</div>
  <div class="lvl"><button class="on" onclick="lv('s5',0,this)">Base</button><button class="p" onclick="lv('s5',1,this)">★ Level up</button></div>
  <div class="base"><p class="ins"><b>5</b>Discuss. Research is expensive — so why do companies still put money into it? What is better: primary research you design yourself, or secondary research you buy? Why?</p>
   <div class="phr"><span>I think companies invest in research because …</span><span>Primary research is more … but …</span><span>Secondary research is cheaper, although …</span><span>It depends on …</span></div></div>
@@ -155,6 +161,7 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s6" class="sec">
+ <div class="bsec">Vocabulary<span class="sub">Terms in market research</span></div>
  <p class="ins"><b>6A</b>Complete the sentences with the words in the box to make collocations from the video.</p>
  <div class="box"><span>customer</span><span>desk</span><span>focus</span><span>in-depth</span><span>launch</span><span>online</span><span>sample</span><span>target</span></div>
  <ol class="ex"><li>These days most companies collect feedback through <input class="gap" data-a="online" autocomplete="off"> <b>surveys.</b></li><li> <input class="gap" data-a="focus" autocomplete="off"> <b>groups are small, but they can help predict how target users will react.</b></li><li>A rating pop-up in an app can tell you about the level of <input class="gap" data-a="customer" autocomplete="off"> <b>satisfaction.</b></li><li>One method of primary research is to hold <input class="gap" data-a="in-depth" autocomplete="off"> <b>interviews with potential users.</b></li><li>Secondary research is also called <input class="gap" data-a="desk" autocomplete="off"> <b>research because it uses data that already exists.</b></li><li>Checking what competitors are doing is useful before you <input class="gap" data-a="launch" autocomplete="off"> <b>a product.</b></li><li>Research helps you define your <input class="gap" data-a="target" autocomplete="off"> <b>audience and decide how to communicate with them.</b></li><li>To make research cheaper, a start-up can reduce the <input class="gap" data-a="sample" autocomplete="off"> <b>size.</b></li></ol>
@@ -164,6 +171,7 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s7" class="sec">
+ <div class="bsec">Vocabulary<span class="sub">Terms in market research</span></div>
  <div class="lvl"><button class="on" onclick="lv('s7',0,this)">Base</button><button class="p" onclick="lv('s7',1,this)">★ Level up</button></div>
  <div class="base"><p class="ins"><b>7</b>Match the words and phrases (1–10) with the definitions (a–j).</p>
   <div class="defs"><div><b>a</b> to measure how people feel about something, or the effect something is likely to have on them</div><div><b>b</b> realistic, and therefore likely to succeed</div><div><b>c</b> a person who tries something new to find out how well it works</div><div><b>d</b> a person whose job is to study a subject and find out new things about it</div><div><b>e</b> connected with how good something is, not how much or how many</div><div><b>f</b> the effect that an event or situation has on someone or something</div><div><b>g</b> connected with research whose results can be shown as numbers or percentages</div><div><b>h</b> a person who answers a set of questions, especially in a survey</div><div><b>i</b> examining information carefully in order to understand it better</div><div><b>j</b> to collect something over a period of time</div></div> <div class="match"><b>1 &nbsp;quantitative</b><select class="sel" data-a="g"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>2 &nbsp;product tester</b><select class="sel" data-a="c"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>3 &nbsp;impact</b><select class="sel" data-a="f"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>4 &nbsp;respondent</b><select class="sel" data-a="h"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>5 &nbsp;gauge</b><select class="sel" data-a="a"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>6 &nbsp;researcher</b><select class="sel" data-a="d"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>7 &nbsp;qualitative</b><select class="sel" data-a="e"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>8 &nbsp;gather</b><select class="sel" data-a="j"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>9 &nbsp;viable</b><select class="sel" data-a="b"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select><b>10 &nbsp;data analysis</b><select class="sel" data-a="i"><option value="">—</option><option value="a">a</option><option value="b">b</option><option value="c">c</option><option value="d">d</option><option value="e">e</option><option value="f">f</option><option value="g">g</option><option value="h">h</option><option value="i">i</option><option value="j">j</option></select></div>
@@ -172,12 +180,14 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s8" class="sec">
+ <div class="bsec">Vocabulary<span class="sub">Terms in market research</span></div>
  <div class="lvl"><button class="on" onclick="lv('s8',0,this)">Base</button><button class="p" onclick="lv('s8',1,this)">★ Level up</button></div>
  <div class="base"><p class="ins"><b>8</b>Choose the best option to complete the explanations of the underlined words and phrases.</p><ol class="ex"><li><u>Qualitative research</u> gives you <span class="opt" data-a="information about why people like or dislike a product"><button onclick="pick(this)">lots of numbers about a product</button> <button onclick="pick(this)">information about why people like or dislike a product</button></span>.</li><li><u>Primary research</u> means <span class="opt" data-a="collecting new data"><button onclick="pick(this)">collecting new data</button> <button onclick="pick(this)">using data that already exists</button></span>.</li><li>A company can measure <u>customer satisfaction</u> by <span class="opt" data-a="using research tools such as surveys and ratings"><button onclick="pick(this)">using research tools such as surveys and ratings</button> <button onclick="pick(this)">building the product</button></span>.</li><li>A <u>viable</u> product <span class="opt" data-a="has"><button onclick="pick(this)">has</button> <button onclick="pick(this)">doesn’t have</button></span> a good chance of success.</li><li>The <u>sample size</u> is the number of <span class="opt" data-a="people"><button onclick="pick(this)">questions</button> <button onclick="pick(this)">people</button></span> you need to get reliable information.</li><li>To <u>gauge</u> how users may react to a new feature, you can <span class="opt" data-a="watch their reactions to a prototype"><button onclick="pick(this)">watch their reactions to a prototype</button> <button onclick="pick(this)">ask them if they have already bought it</button></span>.</li></ol></div>
  <div class="plus"><p class="ins"><b>8</b><span class="star">★</span>Which verbs go with it? Say as many as you can, then make a sentence about your work.</p><div class="card pluscard"><span class="cnt" id="opn"></span><div class="big" id="opw" style="font-size:24px"></div><div class="hint" id="oph"></div><div class="ans" id="opa"></div></div><div class="ctrl"><button class="l" onclick="step('op',-1)">← Back</button><button class="c" onclick="rev('op')">Show verbs</button><button onclick="step('op',1)">Next →</button><button class="l" onclick="shuf('op')">Shuffle</button></div></div>
 </section>
 
 <section id="s9" class="sec">
+ <div class="bsec">Vocabulary<span class="sub">Terms in market research</span></div>
  <div class="lvl"><button class="on" onclick="lv('s9',0,this)">Base</button><button class="p" onclick="lv('s9',1,this)">★ Level up</button></div>
  <div class="base"><p class="ins"><b>9</b>Discuss. Is it important to do market research before launching a new product? What kind of information would a company need? Use vocabulary from Exercises 6A and 7.</p>
   <div class="vocab"><span>online surveys</span><span>focus group</span><span>customer satisfaction</span><span>in-depth interviews</span><span>desk research</span><span>launch a product</span><span>target audience</span><span>sample size</span><span>primary research</span><span>secondary research</span><span>quantitative</span><span>qualitative</span><span>product tester</span><span>impact</span><span>respondent</span><span>gauge</span><span>researcher</span><span>gather</span><span>viable</span><span>data analysis</span></div></div>
@@ -186,9 +196,10 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s10" class="sec">
+ <div class="bsec">PROJECT<span class="sub">How market research affects brands</span></div>
  <div class="lvl"><button class="on" onclick="lv('s10',0,this)">Base</button><button class="p" onclick="lv('s10',1,this)">★ Level up</button></div>
  <div class="base">
-  <p class="ins"><b>10A</b>PROJECT: How market research affects brands. Think of an everyday product or app you use. Choose two well-known brands for it and create a profile of each one.</p>
+  <p class="ins"><b>10A</b>Think of an everyday product or app you use. Choose two well-known brands for it and create a profile of each one.</p>
   <div class="chips"><span>Notion vs Obsidian</span><span>Duolingo vs Babbel</span><span>Spotify vs Apple Music</span><span>Revolut vs Monobank</span><span>Slack vs Microsoft Teams</span><span>Figma vs Canva</span></div>
   <div class="cats">
    <div><b>Attract</b>How does the brand attract customers? What does it offer them?</div>
@@ -217,7 +228,8 @@ textarea.list{font:inherit;font-size:16px;width:100%;max-width:640px;height:110p
 </section>
 
 <section id="s11" class="sec">
- <p class="ins"><b>Self-assessment</b> How well have you achieved the lesson outcome? 0 = I need more practice, 5 = I know this well.</p>
+ <div class="bsec">Self-assessment</div>
+ <p class="ins">How well have you achieved the lesson outcome? 0 = I need more practice, 5 = I know this well.</p>
  <div class="score" id="score"><button onclick="sc(this)">0</button><button onclick="sc(this)">1</button><button onclick="sc(this)">2</button><button onclick="sc(this)">3</button><button onclick="sc(this)">4</button><button onclick="sc(this)">5</button></div>
  <p class="ins" style="margin-top:24px">My phrases: write 5 phrases from today you want to remember — the whole phrase, not one word: <i>gauge interest in a feature</i>, not <i>gauge</i>.</p>
  <div class="mine" id="mine"><input placeholder="1. …"><input placeholder="2. …"><input placeholder="3. …"><input placeholder="4. …"><input placeholder="5. …"></div>
